@@ -1,309 +1,72 @@
 :root {
     --bg-color: #050505;
     --text-main: #f0f0f0;
-    --text-silver: #b0b0b0;
-    --accent-red: #d30000; /* Deep studio red */
-    --accent-dark-red: #8b0000;
-    --metallic-silver: #e6e6e6;
-    --dark-overlay: rgba(10, 10, 10, 0.90);
-    --card-bg: rgba(20, 20, 20, 0.8);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    --accent-red: #d30000;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    background-image: url('FexFenix_BeatstarsBGGG.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: #050505 url('FexFenix_BeatstarsBGGG.png') center/cover fixed;
     color: var(--text-main);
-    line-height: 1.6;
-    padding-top: 70px; /* Space for fixed nav */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding-top: 60px; /* Space for mobile nav */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* -------------------------------------
-   NAVIGATION 
--------------------------------------- */
+/* MOBILE NAV: Hamburger Style */
 nav {
     position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: rgba(5, 5, 5, 0.95);
-    border-bottom: 1px solid #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    z-index: 1000;
-    transition: all 0.3s ease;
+    top: 0; width: 100%; height: 60px;
+    background: #000;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 20px; z-index: 9999;
+    border-bottom: 1px solid var(--accent-red);
 }
 
 .nav-links {
-    display: flex;
-    gap: 2rem;
+    display: flex; gap: 15px;
 }
 
 .nav-links a {
-    color: var(--text-silver);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    font-size: 0.95rem;
+    color: #fff; font-size: 0.8rem; text-transform: uppercase; text-decoration: none;
+    font-weight: 700;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: var(--accent-red);
+/* HERO: Full screen, punchy */
+.hero {
+    height: 80vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 20px; text-align: center;
 }
 
-.lang-switch {
-    background: transparent;
-    color: var(--metallic-silver);
-    border: 1px solid var(--metallic-silver);
-    padding: 6px 16px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 2px;
-    transition: 0.3s;
-    font-size: 0.9rem;
-}
-
-.lang-switch:hover {
-    background: var(--metallic-silver);
-    color: #000;
-}
-
-/* -------------------------------------
-   HEADERS & TYPOGRAPHY 
--------------------------------------- */
-header.hero {
-    min-height: calc(100vh - 70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), var(--bg-color));
-    padding: 2rem 1rem;
-}
-
-.logo {
-    max-width: 100%;
-    width: 650px;
-    margin-bottom: 2rem;
-    filter: drop-shadow(0px 8px 16px rgba(211, 0, 0, 0.2));
-}
-
-.slogan {
-    font-size: 1.5rem;
-    color: var(--metallic-silver);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-    font-weight: 800;
-}
+.logo { width: 100%; max-width: 300px; margin-bottom: 20px; }
 
 .btn-primary {
-    display: inline-block;
-    padding: 14px 35px;
+    display: block;
+    width: 100%; max-width: 300px;
+    padding: 18px;
     background: var(--accent-red);
-    color: #fff;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 50px; /* Modern rounded look */
     text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 2px;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    border: 1px solid var(--accent-red);
-    text-align: center;
+    margin-top: 20px;
 }
 
-.btn-primary:hover {
-    background: transparent;
-    color: var(--accent-red);
-    box-shadow: 0 0 15px rgba(211, 0, 0, 0.4);
-}
-
-/* -------------------------------------
-   STANDARD PAGE SECTIONS 
--------------------------------------- */
-.page-section {
-    padding: 4rem 0;
-    background: var(--dark-overlay);
-    min-height: calc(100vh - 70px);
-}
-
-.page-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--metallic-silver);
-    border-bottom: 2px solid var(--accent-red);
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.title-wrapper {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-/* -------------------------------------
-   GRIDS & CARDS 
--------------------------------------- */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
+/* CARD LAYOUT: Clean Mobile Blocks */
 .card {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 4px;
-    border-top: 3px solid #333;
-    transition: 0.3s;
-    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 15px;
+    padding: 25px;
+    border-left: 5px solid var(--accent-red);
+    border-radius: 8px;
 }
 
-.card:hover {
-    border-top-color: var(--accent-red);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-}
-
-.card h3 {
-    color: var(--metallic-silver);
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-}
-
-/* -------------------------------------
-   FORMS & INPUTS 
--------------------------------------- */
-input, textarea {
-    width: 100%;
-    padding: 1.2rem;
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid #444;
-    color: var(--text-main);
-    border-radius: 2px;
-    font-family: inherit;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--accent-red);
-}
-
-iframe {
-    max-width: 100%;
-}
-
-/* -------------------------------------
-   FOOTER 
--------------------------------------- */
-footer {
-    text-align: center;
-    padding: 2.5rem 20px;
-    background: #000;
-    font-size: 0.9rem;
-    color: #666;
-    border-top: 1px solid #222;
-}
-
-/* =========================================================================
-   MOBILE OPTIMIZATION (Phones & Tablets)
-========================================================================= */
-@media screen and (max-width: 768px) {
-    
-    /* 1. Mobile Navigation Stack */
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        padding: 15px 20px;
-        gap: 15px;
-    }
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .nav-links a {
-        font-size: 0.85rem;
-        padding: 5px;
-    }
-    
-    /* Adjust body padding so top nav doesn't cover content */
-    body {
-        padding-top: 110px; 
-    }
-    header.hero {
-        min-height: calc(100vh - 110px);
-    }
-
-    /* 2. Responsive Hero Section */
-    .logo {
-        width: 90%;
-        margin-bottom: 1.5rem;
-    }
-    .slogan {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-    }
-    header.hero p {
-        font-size: 0.95rem;
-        padding: 0 10px;
-    }
-
-    /* 3. Section Titles */
-    .page-title {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-    .page-section {
-        padding: 2.5rem 0;
-    }
-
-    /* 4. Grid Collapse (1 column on phones) */
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    .card {
-        padding: 1.5rem;
-    }
-
-    /* 5. Touch-friendly Buttons */
-    .btn-primary {
-        width: 100%; /* Makes buttons full-width for easy tapping */
-        display: block;
-        padding: 16px;
-        font-size: 1.1rem;
-    }
-
-    /* 6. Contact Form Adjustments */
-    input, textarea {
-        padding: 1rem;
-    }
+/* STICKY FOOTER CTA: Always visible on mobile */
+.sticky-cta {
+    position: fixed; bottom: 0; width: 100%;
+    background: var(--accent-red);
+    padding: 15px; text-align: center; font-weight: 900;
+    z-index: 9999;
 }
