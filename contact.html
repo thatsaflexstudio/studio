@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | That's a Flex Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" class="lang-text" data-en="Home" data-es="Inicio">Home</a>
+            <a href="services.html" class="lang-text" data-en="Services" data-es="Servicios">Services</a>
+            <a href="beats.html" class="lang-text" data-en="Beats" data-es="Beats">Beats</a>
+            <a href="contact.html" class="active lang-text" data-en="Contact" data-es="Contacto">Contact</a>
+        </div>
+        <button class="lang-switch" id="langBtn">ESPAÑOL</button>
+    </nav>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="title-wrapper">
+                <h1 class="page-title lang-text" data-en="Book Your Day" data-es="Agenda Tu Día">Book Your Day</h1>
+                
+                <!-- NEW LOCATION SUBHEADER -->
+                <p style="color: var(--text-silver); font-size: 1.2rem; margin-top: 10px;" class="lang-text" 
+                   data-en="📍 Located in Bávaro, Punta Cana (Near El Cortecito)" 
+                   data-es="📍 Ubicados en Bávaro, Punta Cana (Cerca de El Cortecito)">
+                   📍 Located in Bávaro, Punta Cana (Near El Cortecito)
+                </p>
+            </div>
+
+            <div class="grid-container" style="align-items: start;">
+                
+                <div class="card" style="text-align: center;">
+                    <h3 class="lang-text" data-en="Direct WhatsApp Booking" data-es="Reservas por WhatsApp">Direct WhatsApp Booking</h3>
+                    <p class="lang-text" data-en="The fastest way to lock in your studio time or discuss a project." data-es="La forma más rápida de asegurar tu tiempo de estudio o discutir un proyecto." style="margin-bottom: 20px; color: var(--text-silver);">The fastest way to lock in your studio time or discuss a project.</p>
+                    
+                    <div style="font-size: 2rem; color: #fff; font-weight: bold; margin-bottom: 30px; letter-spacing: 2px;">
+                        +1 (829) 802-5315
+                    </div>
+                    
+                    <a href="https://wa.me/18298025315" target="_blank" class="btn-primary lang-text" data-en="Message on WhatsApp" data-es="Mensaje por WhatsApp" style="background: #25D366; border-color: #25D366;">Message on WhatsApp</a>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang-text" data-en="Send an Inquiry" data-es="Enviar una Consulta">Send an Inquiry</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                        
+                        <input type="text" name="name" class="lang-placeholder" data-en-placeholder="Name / Artist Name" data-es-placeholder="Nombre / Nombre Artístico" placeholder="Name / Artist Name" required>
+                        <input type="email" name="email" class="lang-placeholder" data-en-placeholder="Email Address" data-es-placeholder="Correo Electrónico" placeholder="Email Address" required>
+                        <textarea name="message" rows="5" class="lang-placeholder" data-en-placeholder="Project details, timeline, budget..." data-es-placeholder="Detalles del proyecto, tiempo, presupuesto..." placeholder="Project details, timeline, budget..." required></textarea>
+                        
+                        <button type="submit" class="btn-primary lang-text" data-en="Send Message" data-es="Enviar Mensaje" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="lang-text" style="color: var(--metallic-silver); font-weight: bold; margin-bottom: 10px;" 
+               data-en="📍 Bávaro, Punta Cana (Near El Cortecito) - Dominican Republic" 
+               data-es="📍 Bávaro, Punta Cana (Cerca de El Cortecito) - República Dominicana">
+               📍 Bávaro, Punta Cana (Near El Cortecito) - Dominican Republic
+            </p>
+            <p>&copy; 2026 That's a Flex Studio | Fex Fenix. <span class="lang-text" data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
