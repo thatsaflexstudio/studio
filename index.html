@@ -41,12 +41,30 @@
                 <h2 class="page-title lang-text" data-en="Latest from Studio" data-es="Lo Último del Estudio">Latest from Studio</h2>
             </div>
             
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <a href="https://instagram.com/fexfenix" target="_blank" style="color: var(--metallic-silver); text-decoration: none; font-size: 1.2rem; font-weight: bold;">@FEXFENIX</a>
+            <div style="text-align: center; margin-bottom: 2.5rem;">
+                <a href="https://instagram.com/fexfenix" target="_blank" 
+                   style="color: var(--text-silver); text-decoration: none; font-size: 1.4rem; font-weight: bold; letter-spacing: 2px; transition: 0.3s;"
+                   onmouseover="this.style.color='var(--accent-red)'" 
+                   onmouseout="this.style.color='var(--text-silver)'">
+                   @FEXFENIX
+                </a>
             </div>
 
-            <div style="width: 100%; min-height: 450px; background: rgba(0,0,0,0.5); border: 1px solid #333; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
-                <p class="lang-text" style="color: #666;" data-en="[Embed Instagram Feed Widget Here]" data-es="[Pega el Widget de Instagram Aquí]">[Embed Instagram Feed Widget Here]</p>
+            <!-- Responsive Container for your Instagram Feed Widget -->
+            <div style="width: 100%; max-width: 1000px; margin: 0 auto; background: rgba(0,0,0,0.4); border: 1px solid #222; border-radius: 4px; padding: 15px;">
+                
+                <!-- 
+                  ============================================================
+                  STEP 5: PASTE YOUR GENERATED EMBED CODE DIRECTLY BELOW THIS LINE 
+                  ============================================================
+                -->
+                <iframe src="https://lightwidget.com/widgets/YOUR_LIGHTWIDGET_ID_HERE.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%; border:0; overflow:hidden; min-height: 500px;"></iframe>
+                <!-- 
+                  ============================================================
+                  PASTE ENDS ABOVE THIS LINE 
+                  ============================================================
+                -->
+
             </div>
         </div>
     </section>
@@ -63,5 +81,10 @@
     </footer>
 
     <script src="main.js"></script>
+	<a href="contact.html" class="sticky-cta lang-text" 
+   data-en="BOOK YOUR SESSION NOW" 
+   data-es="AGENDA TU SESIÓN AHORA">
+   BOOK YOUR SESSION NOW
+</a>
 </body>
 </html>
