@@ -21,6 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
             applyLanguage(currentLang);
         });
     }
+
+    // 4. Mobile Menu Logic
+    const hamburger = document.getElementById('hamburger');
+    const navLinksMenu = document.getElementById('navLinks');
+
+    if (hamburger && navLinksMenu) {
+        // Toggle menu on click
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinksMenu.classList.toggle('active-menu');
+        });
+
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinksMenu.classList.remove('active-menu');
+            });
+        });
+    }
 });
 
 function applyLanguage(lang) {
