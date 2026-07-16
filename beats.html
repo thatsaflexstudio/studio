@@ -2,19 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beat Catalog | That's a Flex Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="index.html" class="lang-text" data-en="Home" data-es="Inicio">Home</a>
             <a href="services.html" class="lang-text" data-en="Services" data-es="Servicios">Services</a>
-            <a href="beats.html" class="lang-text" data-en="Beats" data-es="Beats">Beats</a>
+            <a href="beats.html" class="active lang-text" data-en="Beats" data-es="Beats">Beats</a>
             <a href="contact.html" class="lang-text" data-en="Contact" data-es="Contacto">Contact</a>
         </div>
-        <button class="lang-switch" id="langBtn">ESPAÑOL</button>
+        <div class="nav-controls">
+            <button class="lang-switch" id="langBtn">ESPAÑOL</button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <section class="page-section">
@@ -23,8 +31,8 @@
                 <h1 class="page-title lang-text" data-en="Beat Catalog" data-es="Catálogo de Beats">Beat Catalog</h1>
             </div>
 
-            <div style="width: 100%; height: 700px; background: rgba(0, 0, 0, 0.7); border: 1px solid #333; display: flex; justify-content: center; align-items: center; border-radius: 4px;">
-                <p style="color: #666;"><em>[Drop your BeatStars iframe embed code here]</em></p>
+            <div style="width: 100%; min-height: 500px; height: 70vh; background: rgba(0, 0, 0, 0.7); border: 1px solid #333; display: flex; justify-content: center; align-items: center; border-radius: 4px; overflow: hidden;">
+                <p style="color: #666; text-align: center; padding: 20px;"><em>[Drop your BeatStars iframe embed code here]</em></p>
             </div>
         </div>
     </section>
