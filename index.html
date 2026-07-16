@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- CRITICAL: Viewport meta tag ensures mobile rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>That's a Flex Studio | Fex Fenix</title>
     <link rel="stylesheet" href="style.css">
     <!-- GA4 Tag -->
@@ -11,13 +13,20 @@
 <body>
 
     <nav>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="index.html" class="active lang-text" data-en="Home" data-es="Inicio">Home</a>
             <a href="services.html" class="lang-text" data-en="Services" data-es="Servicios">Services</a>
             <a href="beats.html" class="lang-text" data-en="Beats" data-es="Beats">Beats</a>
             <a href="contact.html" class="lang-text" data-en="Contact" data-es="Contacto">Contact</a>
         </div>
-        <button class="lang-switch" id="langBtn">ESPAÑOL</button>
+        <div class="nav-controls">
+            <button class="lang-switch" id="langBtn">ESPAÑOL</button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <header class="hero">
@@ -25,7 +34,7 @@
             <img src="2023LONGLOGO2.png" alt="Fex Fenix - That's a Flex" class="logo">
             <div class="slogan lang-text" data-en="Your Sound, Your Legacy" data-es="Tu Sonido, Tu Legado">Your Sound, Your Legacy</div>
             
-            <p style="color: var(--text-silver); margin-bottom: 2rem; max-width: 650px; margin-left: auto; margin-right: auto;" class="lang-text" 
+            <p style="color: var(--text-silver); margin-bottom: 2rem; max-width: 650px; margin-left: auto; margin-right: auto; padding: 0 15px;" class="lang-text" 
                data-en="The official studio of Fex Fenix. Exclusive beats, full music production, and professional sound from Bávaro, Punta Cana (Near El Cortecito)." 
                data-es="El estudio oficial de Fex Fenix. Beats exclusivos, producción musical y sonido profesional desde Bávaro, Punta Cana (próximo a El Cortecito).">
                The official studio of Fex Fenix. Exclusive beats, full music production, and professional sound from Bávaro, Punta Cana (Near El Cortecito).
@@ -50,21 +59,8 @@
                 </a>
             </div>
 
-            <!-- Responsive Container for your Instagram Feed Widget -->
-            <div style="width: 100%; max-width: 1000px; margin: 0 auto; background: rgba(0,0,0,0.4); border: 1px solid #222; border-radius: 4px; padding: 15px;">
-                
-                <!-- 
-                  ============================================================
-                  STEP 5: PASTE YOUR GENERATED EMBED CODE DIRECTLY BELOW THIS LINE 
-                  ============================================================
-                -->
+            <div style="width: 100%; max-width: 1000px; margin: 0 auto; background: rgba(0,0,0,0.4); border: 1px solid #222; border-radius: 4px; padding: 15px; overflow: hidden;">
                 <iframe src="https://lightwidget.com/widgets/YOUR_LIGHTWIDGET_ID_HERE.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%; border:0; overflow:hidden; min-height: 500px;"></iframe>
-                <!-- 
-                  ============================================================
-                  PASTE ENDS ABOVE THIS LINE 
-                  ============================================================
-                -->
-
             </div>
         </div>
     </section>
@@ -81,6 +77,8 @@
     </footer>
 
     <script src="main.js"></script>
-	
+	<a href="contact.html" class="sticky-cta lang-text" data-en="BOOK YOUR SESSION NOW" data-es="AGENDA TU SESIÓN AHORA">
+       BOOK YOUR SESSION NOW
+    </a>
 </body>
 </html>
